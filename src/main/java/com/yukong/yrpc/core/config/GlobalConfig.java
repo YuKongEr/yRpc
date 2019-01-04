@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
  * @author: yukong
  * @date: 2018/12/29 17:06
  */
-@PropertySource(value = {"classpath*:yRpc.properties"})
+@PropertySource(value = {"classpath:yRpc.properties"})
 @Configuration
 public class GlobalConfig {
 

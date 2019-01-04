@@ -6,6 +6,7 @@ import com.dyuproject.protostuff.Schema;
 import com.dyuproject.protostuff.runtime.RuntimeSchema;
 import org.springframework.objenesis.Objenesis;
 import org.springframework.objenesis.ObjenesisStd;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -14,6 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author: yukong
  * @date: 2018/12/29 14:14
  */
+@Component
 public class ProtostuffParse implements Parse{
 
     private  Map<Class<?>, Schema<?>> cachedSchema = new ConcurrentHashMap<>();

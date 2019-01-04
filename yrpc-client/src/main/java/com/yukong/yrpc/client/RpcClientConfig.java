@@ -1,20 +1,17 @@
 package com.yukong.yrpc.client;
 
-import com.yukong.yrpc.core.annotation.RemoteRefrence;
 import com.yukong.yrpc.client.proxy.ProxyFactory;
+import com.yukong.yrpc.core.annotation.RemoteRefrence;
 import com.yukong.yrpc.core.config.RegisterClientConfig;
 import org.reflections.Reflections;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.annotation.Order;
-import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.util.CollectionUtils;
 
 import java.util.Set;
@@ -45,7 +42,6 @@ public class RpcClientConfig implements ApplicationContextAware , InitializingBe
     @Override
     public void afterPropertiesSet() throws Exception {
         Reflections reflections = new Reflections(registerClientConfig.getRemoteApiPackage());
-
         Set<Class<?>> typesWithAnnotated = reflections.getTypesAnnotatedWith(RemoteRefrence.class);
 
         if (!CollectionUtils.isEmpty(typesWithAnnotated)){

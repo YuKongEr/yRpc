@@ -4,7 +4,6 @@ import com.yukong.yrpc.client.RpcClientRequestPool;
 import com.yukong.yrpc.client.RpcClientRunner;
 import com.yukong.yrpc.core.model.RpcRequest;
 import com.yukong.yrpc.core.model.RpcResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.reflect.Method;
 import java.util.UUID;

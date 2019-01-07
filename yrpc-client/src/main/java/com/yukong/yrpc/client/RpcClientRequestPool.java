@@ -49,7 +49,7 @@ public class RpcClientRequestPool {
         if (promise == null) {
             return null;
         }
-        RpcResponse response = promise.get(10, TimeUnit.SECONDS);
+        RpcResponse response = promise.get(60, TimeUnit.SECONDS);
         requestPool.remove(requestId);
         return response;
     }

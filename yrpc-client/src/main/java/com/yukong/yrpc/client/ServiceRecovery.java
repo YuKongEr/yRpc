@@ -1,6 +1,6 @@
 package com.yukong.yrpc.client;
 
-import com.yukong.yrpc.core.annotation.RemoteRefrence;
+import com.yukong.yrpc.core.annotation.RemoteReference;
 import com.yukong.yrpc.core.config.RegisterClientConfig;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
@@ -66,10 +66,27 @@ public class ServiceRecovery {
         Map<String, String> serviceAddressMap = new ConcurrentHashMap<>(16);
         connect();
         Reflections reflections = new Reflections(registerClientConfig.getRemoteApiPackage());
-        Set<Class<?>> typesWithAnnotated = reflections.getTypesAnnotatedWith(RemoteRefrence.class);
+        Set<Class<?>> typesWithAnnotated = reflections.getTypesAnnotatedWith(RemoteReference.class);
         Set<String> serviceNames = typesWithAnnotated.stream().map(cl -> cl.getName()).collect(Collectors.toSet());
         String rootPath = registerClientConfig.getRootPath();
         serviceNames.forEach( serviceName -> {
+            String servicePath = rootPath + "/" + serviceName;
+            recoverService(serviceAddressMap, servicePath);
+        });
+        return serviceAddressMap;
+    }
+
+
+    /**
+     * 发现指定服务和它的地址
+     * @return
+     * @throws IOException
+     * @throws InterruptedException
+     */
+    public void recoverService( Map<String, String> serviceAddressMap, String serviceName){
+
+        String rootPath = registerClientConfig.getRootPath();
+
             String servicePath = rootPath + "/" + serviceName;
             // 节点存在
             try {
@@ -88,10 +105,8 @@ public class ServiceRecovery {
                     }
                 }
             } catch (KeeperException | InterruptedException e) {
-               logger.error("error: {}", e);
+                logger.error("error: {}", e);
             }
-        });
-        return serviceAddressMap;
     }
 
 }

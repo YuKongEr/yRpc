@@ -12,16 +12,11 @@ import java.lang.annotation.Target;
  * @date: 2019/1/2 14:49
  */
 @Component
-@Target(value = ElementType.TYPE)
+@Target(value = {ElementType.TYPE, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface RemoteRefrence {
+public @interface RemoteReference {
 
 
-    /**
-     * 实现的接口类型
-     * @return
-     */
-    Class<?> value();
 
     /**
      * 是否子类代理
@@ -36,5 +31,9 @@ public @interface RemoteRefrence {
      * @return
      */
     String protocol() default "";
+
+    String interfaceName() default "";
+
+    Class interfaceClassName() default void.class;
 
 }

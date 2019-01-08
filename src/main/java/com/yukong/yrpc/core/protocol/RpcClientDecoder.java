@@ -1,6 +1,5 @@
 package com.yukong.yrpc.core.protocol;
 
-import com.yukong.yrpc.core.model.RpcRequest;
 import com.yukong.yrpc.core.model.RpcResponse;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

@@ -66,7 +66,7 @@ public class ServiceRegistry implements ApplicationContextAware {
         zookeeper = new ZooKeeper(registerServerConfig.getAddress(), registerServerConfig.getSessionTimeOut(), new Watcher() {
             @Override
             public void process(WatchedEvent watchedEvent) {
-                if (watchedEvent.getState().equals(Event.KeeperState.SyncConnected)){
+                if (watchedEvent.getState().equals(Watcher.Event.KeeperState.SyncConnected)){
                     countDownLatch.countDown();
                 }
             }

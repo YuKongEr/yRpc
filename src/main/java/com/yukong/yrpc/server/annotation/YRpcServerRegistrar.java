@@ -1,7 +1,5 @@
 package com.yukong.yrpc.server.annotation;
 
-import com.yukong.yrpc.core.util.BeanRegistrar;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;

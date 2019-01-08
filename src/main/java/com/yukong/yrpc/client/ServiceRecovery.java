@@ -1,5 +1,6 @@
 package com.yukong.yrpc.client;
 
+import com.yukong.yrpc.client.annotation.RemoteReferenceAnnotationBeanPostProcessor;
 import com.yukong.yrpc.core.annotation.RemoteReference;
 import com.yukong.yrpc.core.config.RegisterClientConfig;
 import org.apache.zookeeper.KeeperException;
@@ -11,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
 import java.io.IOException;
@@ -65,13 +67,10 @@ public class ServiceRecovery {
     public Map<String, String> recoverServices() throws IOException, InterruptedException {
         Map<String, String> serviceAddressMap = new ConcurrentHashMap<>(16);
         connect();
-        Reflections reflections = new Reflections(registerClientConfig.getRemoteApiPackage());
-        Set<Class<?>> typesWithAnnotated = reflections.getTypesAnnotatedWith(RemoteReference.class);
-        Set<String> serviceNames = typesWithAnnotated.stream().map(cl -> cl.getName()).collect(Collectors.toSet());
+        Set<String> serviceNames =   RemoteReferenceAnnotationBeanPostProcessor.needRecoveryServiceNames;
         String rootPath = registerClientConfig.getRootPath();
-        serviceNames.forEach( serviceName -> {
-            String servicePath = rootPath + "/" + serviceName;
-            recoverService(serviceAddressMap, servicePath);
+        serviceNames.forEach(serviceName -> {
+            recoverService(serviceAddressMap, serviceName);
         });
         return serviceAddressMap;
     }
@@ -92,7 +91,7 @@ public class ServiceRecovery {
             try {
                 if(zooKeeper.exists(servicePath, false) != null) {
                     List<String> children = zooKeeper.getChildren(servicePath, false);
-                    if (!StringUtils.isEmpty(children)){
+                    if (!CollectionUtils.isEmpty(children)){
                         //地址多于一个取第一个，可以扩展做负载均衡
                         byte[] bytes = zooKeeper.getData(servicePath + "/" + children.get(0), false, null);
                         String address = new String(bytes);

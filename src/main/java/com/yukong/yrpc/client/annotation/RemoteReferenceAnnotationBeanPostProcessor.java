@@ -43,10 +43,7 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -78,6 +75,8 @@ public class RemoteReferenceAnnotationBeanPostProcessor extends InstantiationAwa
 
     private final ConcurrentMap<String, RemoteReferenceBean<?>> referenceBeansCache =
             new ConcurrentHashMap<String, RemoteReferenceBean<?>>();
+
+    public static Set<String> needRecoveryServiceNames = Collections.synchronizedSet(new HashSet<String>());
 
     @Override
     public PropertyValues postProcessPropertyValues(
@@ -326,6 +325,8 @@ public class RemoteReferenceAnnotationBeanPostProcessor extends InstantiationAwa
 
             referenceBean = buildRemoteReferenceBean(reference, referenceClass);
 
+
+
             ReflectionUtils.makeAccessible(method);
 
             method.invoke(bean, referenceBean.getObject());
@@ -406,6 +407,7 @@ public class RemoteReferenceAnnotationBeanPostProcessor extends InstantiationAwa
                 "/" + reference.version() +
                 "/" + reference.group();*/
         String key = interfaceName;
+        needRecoveryServiceNames.add(interfaceName);
         Environment environment = applicationContext.getEnvironment();
 
         key = environment.resolvePlaceholders(key);

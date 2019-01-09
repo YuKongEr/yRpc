@@ -1,6 +1,5 @@
 ## YRPC
----
->[中文文档](https://github.com/YuKongEr/yRpc/blob/master/README-CN.MD)
+[中文文档](https://github.com/YuKongEr/yRpc/blob/master/README-CN.MD)
 
 [![](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/YuKongEr/yRpc/tree/master)  [![](https://img.shields.io/badge/license-apache2.0-blue.svg)](https://github.com/YuKongEr/yRpc/tree/master)   [![]( https://img.shields.io/badge/packagist-1.1-brightgreen.svg)]( https://search.maven.org/search?q=a:yrpc-spring-boot-starter )  [![](https://img.shields.io/badge/license-apache2.0-blue.svg)](https://github.com/YuKongEr/yRpc/tree/master)   [![]( https://img.shields.io/badge/release-v1.1-blue.svg 
 )]( https://search.maven.org/search?q=a:yrpc-spring-boot-starter )

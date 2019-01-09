@@ -39,6 +39,18 @@ YRPC 是一个高可扩展性、高性能、 Java RPC 框架。
         port: 8989
         host: 127.0.0.1
 ```
+### 开启自动装配
+```java
+@SpringBootApplication
+@EnableYRpc
+public class YrpcConsumerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(YrpcConsumerApplication.class, args);
+    }
+    
+}
+```
 
 ### 定义服务接口
 ```java

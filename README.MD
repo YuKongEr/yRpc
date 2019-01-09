@@ -40,6 +40,19 @@ Operation requirements JDK 8 and above.
         host: 127.0.0.1
 ```
 
+### Enable automatic config
+```java
+@SpringBootApplication
+@EnableYRpc
+public class YrpcConsumerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(YrpcConsumerApplication.class, args);
+    }
+    
+}
+```
+
 ### Defined Service Interface
 ```java
     public interface TestService {

@@ -7,7 +7,7 @@
 
 YRPC is a highly scalable, high performance, Java RPC framework.
 
-##Functional 
+## Functional 
 - Transparent and High Performance Remote Service Call
 - Support multiple service routing and load balancing strategies
 - Support for Zookeeper Center Integration

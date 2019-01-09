@@ -58,7 +58,7 @@ Operation requirements JDK 8 and above.
         }
     }
 ```
-Pass through`@RemoteService(TestService.class)` Designated as a service provider, where Annotated `value'is the interface to the implementation，`isProxyTargetClass` select proxy mode for use。
+Pass through`@RemoteService(TestService.class)` Designated as a service provider, where Annotated `value`is the interface to the implementation，`isProxyTargetClass` select proxy mode for use。
 
 ### Consumer service
 ```java
@@ -71,7 +71,7 @@ Pass through`@RemoteService(TestService.class)` Designated as a service provider
     }
 ```
 
-It can be injected through `@RemoteReference'.
+It can be injected through `@RemoteReference`.
 
 
  

@@ -5,8 +5,7 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 
 /**
- * @author: yukong
- * @date: 2019/1/7 11:03
+ * @author : yukong
  */
 public class BeanRegistrar {
     /**

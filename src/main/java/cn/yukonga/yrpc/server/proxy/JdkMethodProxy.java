@@ -6,9 +6,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 09:36
- */
+ * @author : yukong
+  */
 public class JdkMethodProxy implements MethodProxy{
     @Override
     public Object invoke(RpcRequest rpcRequest, Object targetBean) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {

@@ -13,9 +13,8 @@ import org.springframework.context.ApplicationContext;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 16:39
- */
+ * @author : yukong
+  */
 @ChannelHandler.Sharable
 public class RpcServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
 

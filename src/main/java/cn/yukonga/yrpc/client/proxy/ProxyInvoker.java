@@ -6,8 +6,7 @@ import cn.yukonga.yrpc.client.RpcClientRunner;
 import java.lang.reflect.Method;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 16:36
+ * @author : yukong
  */
 public interface ProxyInvoker {
 

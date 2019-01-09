@@ -12,9 +12,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 14:14
- */
+ * @author : yukong
+  */
 @Component
 public class ProtostuffParse implements Parse{
 
@@ -36,7 +35,7 @@ public class ProtostuffParse implements Parse{
     }
 
     /**
-     * 序列化（对象 -> 字节数组）
+     * 序列化（对象 转 字节数组）
      */
     @Override
     public  <T> byte[] serialize(T obj) {

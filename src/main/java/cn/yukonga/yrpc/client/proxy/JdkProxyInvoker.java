@@ -9,8 +9,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 17:16
+ * @author : yukong
  */
 @Component
 public class JdkProxyInvoker extends AbstructRpcProxyInvoker implements InvocationHandler {

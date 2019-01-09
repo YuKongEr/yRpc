@@ -8,9 +8,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 11:22
- * 远程接口注解
+ * @author : yukong
+  * 远程接口注解
  *
  */
 @Component
@@ -20,7 +19,7 @@ public @interface RemoteService {
 
     /**
      * 实现的接口类型
-     * @return
+     * @return 接口类型
      */
     Class<?> value();
 
@@ -28,13 +27,13 @@ public @interface RemoteService {
      * 是否子类代理
      * 是： 使用cglib
      * 否：使用jdk
-     * @return
+     * @return 子类代理
      */
     boolean isProxyTargetClass() default false;
 
     /**
      * 使用的协议类型
-     * @return
+     * @return 协议类型
      */
     String protocol() default "";
 

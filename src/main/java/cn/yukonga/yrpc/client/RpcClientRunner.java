@@ -28,9 +28,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
- * @author: yukong
- * @date: 2019/1/3 10:48
- */
+ * @author : yukong
+  */
 @Component
 public class RpcClientRunner implements InitializingBean, DisposableBean {
 

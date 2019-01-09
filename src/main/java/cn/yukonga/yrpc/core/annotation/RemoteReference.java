@@ -8,9 +8,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 14:49
- */
+ * @author : yukong
+  */
 @Component
 @Target(value = {ElementType.TYPE, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
@@ -22,13 +21,13 @@ public @interface RemoteReference {
      * 是否子类代理
      * 是： 使用cglib
      * 否：使用jdk
-     * @return
+     * @return boolean
      */
     boolean isProxyTargetClass() default false;
 
     /**
      * 使用的协议类型
-     * @return
+     * @return 协议类型
      */
     String protocol() default "";
 

@@ -7,8 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 14:10
+ * @author : yukong
  */
 @Configuration
 @Order

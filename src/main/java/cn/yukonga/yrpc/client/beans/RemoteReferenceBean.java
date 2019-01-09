@@ -6,8 +6,7 @@ import org.springframework.context.ApplicationContext;
 
 
 /**
- * @author: yukong
- * @date: 2019/1/7 11:44
+ * @author : yukong
  */
 public class RemoteReferenceBean<T> implements DisposableBean {
 

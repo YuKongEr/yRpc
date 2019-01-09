@@ -15,14 +15,13 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * @author: yukong
- * @date: 2019/1/7 11:06
+ * @author : yukong
  */
 public class YRpcClientRegistrar implements ImportBeanDefinitionRegistrar {
 
-    private static final String DEFAULT_Y_RPC_CLIENT_PACKAGE = "com.yukong.yrpc.client";
+    private static final String DEFAULT_Y_RPC_CLIENT_PACKAGE = "cn.yukonga.yrpc.client";
 
-    private static final String DEFAULT_Y_RPC_CORE_PACKAGE = "com.yukong.yrpc.core";
+    private static final String DEFAULT_Y_RPC_CORE_PACKAGE = "cn.yukonga.yrpc.core";
 
 
     @Override

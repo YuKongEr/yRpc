@@ -10,9 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * @author: yukong
- * @date: 2019/1/3 14:01
- */
+ * @author : yukong
+  */
 @Component
 @ChannelHandler.Sharable
 public class RpcClientHandler extends SimpleChannelInboundHandler<RpcResponse> {

@@ -9,8 +9,7 @@ import java.lang.reflect.Method;
 import java.util.UUID;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 16:38
+ * @author : yukong
  */
 public class AbstructRpcProxyInvoker implements ProxyInvoker{
 

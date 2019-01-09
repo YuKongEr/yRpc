@@ -9,8 +9,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Proxy;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 17:18
+ * @author : yukong
  */
 @Component
 public class ProxyFactory  {

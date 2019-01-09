@@ -3,9 +3,8 @@ package cn.yukonga.yrpc.core.model;
 import java.util.Arrays;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 10:37
- * rpc请求信息
+ * @author : yukong
+  * rpc请求信息
  */
 public class RpcRequest {
 

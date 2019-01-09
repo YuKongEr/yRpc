@@ -9,9 +9,8 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 15:59
- */
+ * @author : yukong
+  */
 @Component
 public class JsonParse implements Parse {
 

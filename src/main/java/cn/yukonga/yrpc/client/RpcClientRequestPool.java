@@ -15,9 +15,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @author: yukong
- * @date: 2019/1/3 11:05
- */
+ * @author : yukong
+  */
 @Component
 public class RpcClientRequestPool {
 

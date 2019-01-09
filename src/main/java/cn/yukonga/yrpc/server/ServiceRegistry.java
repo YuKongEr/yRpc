@@ -18,9 +18,8 @@ import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 11:39
- */
+ * @author : yukong
+  */
 @Component
 public class ServiceRegistry implements ApplicationContextAware {
 
@@ -60,7 +59,8 @@ public class ServiceRegistry implements ApplicationContextAware {
 
     /**
      * 连接zk服务器
-     * @throws IOException
+     * @throws IOException 抛出IOException
+     * @throws InterruptedException 抛出InterruptedException
      */
     private void connect() throws IOException, InterruptedException {
         zookeeper = new ZooKeeper(registerServerConfig.getZookeeper().getAddress(), registerServerConfig.getZookeeper().getSessionTimeOut(), new Watcher() {
@@ -92,7 +92,7 @@ public class ServiceRegistry implements ApplicationContextAware {
 
     /**
      * 创建服务节点
-     * @param serviceName
+     * @param serviceName 服务名称
      */
     private void createServiceNode(String serviceName) {
         try {

@@ -9,9 +9,8 @@ import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author: yukong
- * @date: 2018/12/29 16:07
- */
+ * @author : yukong
+  */
 public class RpcClientEncoder extends MessageToByteEncoder<RpcRequest> {
 
     private Logger logger = LoggerFactory.getLogger(getClass());

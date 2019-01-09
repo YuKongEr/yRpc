@@ -4,9 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 14:13
- */
+ * @author : yukong
+  */
 @Component
 @ConfigurationProperties(prefix = "yrpc.zookeeper")
 public class ZookeeperConfig {

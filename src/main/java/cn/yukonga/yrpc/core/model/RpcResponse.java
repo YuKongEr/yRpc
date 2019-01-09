@@ -1,9 +1,8 @@
 package cn.yukonga.yrpc.core.model;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 10:39
- * rpc相应
+ * @author : yukong
+  * rpc相应
  */
 public class RpcResponse {
 

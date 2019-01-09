@@ -8,9 +8,8 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import java.util.List;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 14:06
- */
+ * @author : yukong
+  */
 public class RpcServerDecoder extends ByteToMessageDecoder {
 
     private Parse parse;

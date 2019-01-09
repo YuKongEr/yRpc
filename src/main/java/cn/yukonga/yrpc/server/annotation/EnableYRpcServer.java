@@ -7,9 +7,8 @@ import org.springframework.core.annotation.AliasFor;
 import java.lang.annotation.*;
 
 /**
- * @author: yukong
- * @date: 2019/1/7 11:17
- */
+ * @author : yukong
+  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented

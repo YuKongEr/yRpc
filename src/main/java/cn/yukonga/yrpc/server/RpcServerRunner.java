@@ -26,9 +26,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 17:12
- */
+ * @author : yukong
+  */
 @Component
 public class RpcServerRunner implements InitializingBean, ApplicationContextAware {
 

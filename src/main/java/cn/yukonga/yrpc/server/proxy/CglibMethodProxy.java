@@ -7,9 +7,8 @@ import org.springframework.cglib.reflect.FastMethod;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 09:36
- */
+ * @author : yukong
+  */
 public class CglibMethodProxy implements MethodProxy{
     @Override
     public Object invoke(RpcRequest rpcRequest, Object targetBean) throws InvocationTargetException {

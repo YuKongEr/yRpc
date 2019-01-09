@@ -5,9 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 17:06
- */
+ * @author : yukong
+  */
 @Configuration
 public class GlobalConfig {
 

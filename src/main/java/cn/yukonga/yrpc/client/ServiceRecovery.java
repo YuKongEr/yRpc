@@ -20,8 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 17:50
+ * @author : yukong
  */
 @Component
 public class ServiceRecovery {
@@ -37,8 +36,8 @@ public class ServiceRecovery {
 
     /**
      * 连接zk
-     * @throws IOException
-     * @throws InterruptedException
+     * @throws IOException 抛出IOException
+     * @throws InterruptedException 抛出InterruptedException
      */
     private void connect() throws IOException, InterruptedException {
 
@@ -56,9 +55,9 @@ public class ServiceRecovery {
 
     /**
      * 发现服务和它的地址
-     * @return
-     * @throws IOException
-     * @throws InterruptedException
+     * @return 服务名与地址map
+     * @throws IOException 抛出IOException
+     * @throws InterruptedException 抛出InterruptedException
      */
     public Map<String, String> recoverServices() throws IOException, InterruptedException {
         Map<String, String> serviceAddressMap = new ConcurrentHashMap<>(16);
@@ -74,9 +73,6 @@ public class ServiceRecovery {
 
     /**
      * 发现指定服务和它的地址
-     * @return
-     * @throws IOException
-     * @throws InterruptedException
      */
     public void recoverService( Map<String, String> serviceAddressMap, String serviceName){
 

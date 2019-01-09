@@ -4,9 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * @author: yukong
- * @date: 2019/1/8 16:54
- */
+ * @author : yukong
+  */
 @Component
 @ConfigurationProperties(prefix = "yrpc.netty")
 public class NettyConfig {

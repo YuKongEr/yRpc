@@ -1,9 +1,8 @@
 package cn.yukonga.yrpc.core.protocol;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 14:33
- */
+ * @author :  yukong
+  */
 public interface Parse {
 
     /**

@@ -10,8 +10,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 
 /**
- * @author: yukong
- * @date: 2019/1/2 17:17
+ * @author : yukong
  */
 @Component
 public class CglibProxyInvoker extends AbstructRpcProxyInvoker implements MethodInterceptor {

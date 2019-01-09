@@ -13,12 +13,11 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * @author: yukong
- * @date: 2019/1/7 11:06
- */
+ * @author : yukong
+  */
 public class YRpcServerRegistrar implements ImportBeanDefinitionRegistrar {
-    private static final String DEFAULT_Y_RPC_SERVER_PACKAGE = "com.yukong.yrpc.server";
-    private static final String DEFAULT_Y_RPC_CORE_PACKAGE = "com.yukong.yrpc.core";
+    private static final String DEFAULT_Y_RPC_SERVER_PACKAGE = "cn.yukonga.yrpc.server";
+    private static final String DEFAULT_Y_RPC_CORE_PACKAGE = "cn.yukonga.yrpc.core";
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {

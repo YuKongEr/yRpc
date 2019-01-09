@@ -4,9 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * @author: yukong
- * @date: 2018/12/29 11:30
- */
+ * @author : yukong
+  */
 @Component
 @ConfigurationProperties(prefix = "yrpc")
 public class RegisterServerConfig {

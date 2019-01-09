@@ -4,8 +4,7 @@ import io.netty.channel.Channel;
 import io.netty.channel.EventLoopGroup;
 
 /**
- * @author: yukong
- * @date: 2019/1/3 14:24
+ * @author : yukong
  */
 public class RpcClientChannelHolder {
 

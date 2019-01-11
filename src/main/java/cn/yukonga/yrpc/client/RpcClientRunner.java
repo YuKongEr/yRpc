@@ -89,7 +89,7 @@ public class RpcClientRunner implements InitializingBean, DisposableBean {
 
     public void createConnection() {
         try {
-            this.serviceAddressMap = serviceRecovery.recoverServices();
+            this.serviceAddressMap = serviceRecovery.init();
         } catch (IOException | InterruptedException e) {
             logger.error("error: {}", e);
         }
@@ -127,7 +127,12 @@ public class RpcClientRunner implements InitializingBean, DisposableBean {
                         pipeline.addLast(clientHandler);
                     }
                 });
-        Channel channel = bootstrap.connect().channel();
+        Channel channel = null;
+        try {
+            channel = bootstrap.connect().sync().channel();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         RpcClientChannelHolder channelHold = new RpcClientChannelHolder(channel, eventLoopGroup);
         addressChannelMap.put(address, channelHold);
         return channelHold;

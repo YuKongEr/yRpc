@@ -7,7 +7,7 @@
     <groupId>cn.yukonga</groupId>
     <artifactId>yrpc-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.RELEASE</version>
+    <version>1.2.SNAPSHOT</version>
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>

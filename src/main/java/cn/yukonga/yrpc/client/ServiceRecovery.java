@@ -61,13 +61,17 @@ public class ServiceRecovery {
      */
     public Map<String, String> recoverServices() throws IOException, InterruptedException {
         Map<String, String> serviceAddressMap = new ConcurrentHashMap<>(16);
-        connect();
         Set<String> serviceNames =   RemoteReferenceAnnotationBeanPostProcessor.needRecoveryServiceNames;
         String rootPath = registerClientConfig.getRootPath();
         serviceNames.forEach(serviceName -> {
             recoverService(serviceAddressMap, serviceName);
         });
         return serviceAddressMap;
+    }
+
+    public  Map<String, String> init() throws IOException, InterruptedException {
+        connect();
+        return recoverServices();
     }
 
 
